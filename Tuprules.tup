@@ -1,0 +1,11 @@
+CFLAGS += -Wall
+
+ifeq (@(DEBUG),y)
+	CFLAGS += -g
+else
+	CFLAGS += -O3
+endif
+
+.gitignore
+
+!cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
