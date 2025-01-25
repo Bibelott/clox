@@ -1,4 +1,4 @@
-CFLAGS += -Wall
+CFLAGS += -Wall -std=c17
 
 ifeq (@(DEBUG),y)
 	CFLAGS += -g
@@ -8,4 +8,4 @@ endif
 
 .gitignore
 
-!cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
+!cc = |> ^j^ gcc $(CFLAGS) -c %f -o %o |> %B.o
