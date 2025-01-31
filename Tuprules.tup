@@ -1,7 +1,7 @@
 CFLAGS += -Wall -std=c17
 
 ifeq (@(DEBUG),y)
-	CFLAGS += -g
+	CFLAGS += -g -DDEBUG_PRINT_CODE -DDEBUG_TRACE_EXECUTION
 else
 	CFLAGS += -O3
 endif
